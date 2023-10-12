@@ -1,0 +1,105 @@
+.contact-container {
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    padding: 40px;
+    text-align: center;
+    color: #82187c;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact{
+    gap: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.contact p{
+    margin-bottom: 0rem;
+    font-size: 1rem;
+}
+
+.contactUS{    
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+.details{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.details p{
+    color: black;
+    font-size: 1rem;
+    font-weight: 0;
+    text-align: left; 
+}
+
+.details span{
+    color: var(--secondcolor);
+    margin-right: 5px;
+}
+
+.Simbol{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.orar{
+    padding: 14px 16px;
+}
+
+.contactUS a{
+    color: grey;  
+}
+
+.form{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: -webkit-fill-available;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+textarea{
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    height: 100px;
+}
+
+input[type="submit"]{
+    font-family: 'Red Hat Display', sans-serif;
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    color: #82187c;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 26px;
+    border-radius: 5px;
+    width: 20%;
+    font-weight: 700;
+}
+

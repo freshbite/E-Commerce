@@ -1,0 +1,86 @@
+.about-me-container {
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    padding: 40px;
+    text-align: center;
+    color: #82187c;
+}
+  
+.about-me-content {
+   margin: 0 auto;
+}
+
+h1{
+  font-weight: 800;
+  background-image: linear-gradient(45deg, rgb(27, 39, 58), #af4261);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+  
+.video{
+  height: auto;
+  width: -webkit-fill-available;
+}
+
+h1{
+  float: left;
+}
+
+.aboutUS{
+  padding: 0px;
+}
+
+.aboutUS p{
+  box-sizing: inherit;
+  padding: 0px 40px;
+}
+
+.images{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.images img{
+  height: 300px
+}
+
+.images p{
+  text-align: left;
+  font-size: inherit;
+}
+
+.describe{
+  display: flex;
+  padding: 0px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.describe h3{
+  float: left;
+  font-size: large;
+  margin-bottom: 0px;
+}
+
+.h3p{
+  display: flex;
+  padding: 10px 25px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+  /*p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }*/

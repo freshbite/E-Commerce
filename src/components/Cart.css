@@ -1,0 +1,12 @@
+.cart-container {
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    padding: 40px;
+    text-align: center;
+    color: #82187c;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

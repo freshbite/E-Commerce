@@ -1,0 +1,90 @@
+.details-container {
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    padding: 40px;
+    text-align: center;
+    color: #82187c;
+    min-height: 100vh;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.badita{
+    display: flex;
+    flex-direction: column;
+}
+.prodimg{
+    width: 600px;
+    height: 300px;
+}
+
+.descr{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+
+.descr2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: left;
+    margin-top: 0px;
+    justify-content: space-between;
+}
+
+.descr2 h1{
+    background-image: linear-gradient(265deg, rgb(27, 39, 58), #af4261);
+    margin: 0px;
+}
+
+.brand{
+    margin-top: 0px;
+}
+
+.stockk{
+    margin: 0px;
+    font-size: 1rem;
+    color: rgb(0, 116, 29);
+    font-weight: 800;
+    margin-bottom: 0px;
+}
+
+.priceok{
+    margin: 0px;
+    font-weight: 900;
+    color: #ef2809;
+}
+
+.react-slideshow-container{
+    width: 600px;
+    height: 300px;
+}
+
+.react-slideshow-wrapper.slide {
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    height: 350px;
+  }
+  
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }

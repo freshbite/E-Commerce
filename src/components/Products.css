@@ -1,0 +1,5 @@
+.products {
+    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    position: absolute;
+    z-index: -1;
+}
