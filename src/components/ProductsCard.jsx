@@ -7,6 +7,35 @@ import { ReactSVG } from 'react-svg'
 
 function ProductsCard(props) {
 
+
+
+    // This functions adds the items to the local storage,
+    // We can retrieve the items added to cart later from any components
+    // by using localStorage.getItem("cart")
+    // This is better than passing props because it's persistent on browser refreshes
+    // and doesn't need a High Order Component or a container in order to pass the shared props (cart)
+    function addToCart() {
+
+        if (localStorage.getItem("cart") != null) {
+            console.log("cart has existing items, appending...")
+            let productsArray = JSON.parse(localStorage.getItem("cart"));
+            console.log(productsArray);
+            productsArray.push(oneProduct);
+            localStorage.setItem("cart", JSON.stringify(productsArray));
+            alert("Appended " + oneProduct.title + " to cart");
+            return;
+        }
+
+        // cart doesn't have any items set, we set the first value to an array with the added item
+        console.log("first item added")
+        localStorage.setItem("cart", JSON.stringify([oneProduct]));
+        console.log(localStorage.getItem("cart"));
+        alert("Added " + oneProduct.title + " to cart");
+
+
+    };
+
+
     const {oneProduct} = props;
     console.log("oneProduct", oneProduct);
     console.log(Math.round(oneProduct.discountPercentage));
@@ -49,7 +78,7 @@ function ProductsCard(props) {
                     <Card.Text className='newprice stars supprice'>Price: {qwe[0]}<sup> {supprice[1]}</sup></Card.Text>
                     <div className='Cart'>
                         <span class="material-symbols-outlined">shopping_cart</span>
-                            <Button className='Button'>Add to cart</Button>
+                            <Button className='Button' onClick={addToCart}>Add to cart</Button>
                     </div>
                 </Card.Body>
             </Card>
