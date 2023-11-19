@@ -36,6 +36,11 @@ function Cart() {
         
     }, [items, itemsLoaded]);
 
+    function removeItem() {
+        items.splice(-1, 1);
+        console.log("ITEM REMOVED");
+        console.log("ITEM REMOVED", items);
+    }
 
     return(
         <div className="cart-container">
@@ -67,6 +72,7 @@ function Cart() {
                 
             }
                 <div>Total = {total}</div>
+                <Button className='Button' onClick={removeItem}>Remove Item</Button>
             </div>
            
         </div>
