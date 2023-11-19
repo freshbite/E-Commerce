@@ -10,3 +10,18 @@
     flex-direction: column;
     align-items: flex-start;
 }
+
+.priceCart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalCart{
+    border: 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 50%;
+}
