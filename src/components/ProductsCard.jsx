@@ -18,19 +18,19 @@ function ProductsCard(props) {
 
         if (localStorage.getItem("cart") != null) {
             console.log("cart has existing items, appending...")
-            let productsArray = JSON.parse(localStorage.getItem("cart"));
+            let productsArray = JSON.parse(localStorage.getItem("cart"));// preluam obiectul de la server ca stringa si il convertim in obiect
             console.log(productsArray);
             productsArray.push(oneProduct);
             localStorage.setItem("cart", JSON.stringify(productsArray));
-            alert("Appended " + oneProduct.title + " to cart");
+            //alert("Appended " + oneProduct.title + " to cart");
             return;
         }
 
         // cart doesn't have any items set, we set the first value to an array with the added item
         console.log("first item added")
-        localStorage.setItem("cart", JSON.stringify([oneProduct]));
+        localStorage.setItem("cart", JSON.stringify([oneProduct])); //convertim obiectul nostru in stringa si il transmitem catre localstorage ca stringa
         console.log(localStorage.getItem("cart"));
-        alert("Added " + oneProduct.title + " to cart");
+        //alert("Added " + oneProduct.title + " to cart");
 
 
     };

@@ -1,9 +1,11 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 //TODO: Replace cart button to cart icon button
 
 function Header() {
+
     return (
         <div className='header'>
             <div className="logo">
@@ -30,6 +32,7 @@ function Header() {
             <div className="cart">                 
                 <Link to='/cart'>
                     <img src={require('./Cart.png')}/>
+                    
                 </Link>
             </div>
         </div>

@@ -37,10 +37,21 @@ function Cart() {
     }, [items, itemsLoaded]);
 
     function removeItem() {
-        items.splice(-1, 1);
-        console.log("ITEM REMOVED");
-        console.log("ITEM REMOVED", items);
+        
+        var existingItems = JSON.parse(localStorage.getItem('cart'));
+        console.log("existingItems", existingItems.length);
+        var itemIndex = 0;// index of item to be removed
+        existingItems.splice(itemIndex, 1)
+        localStorage.setItem('cart', JSON.stringify(existingItems));
+        setItems(JSON.parse(localStorage.getItem("cart")));
+
+        let currentTotal = total;
+        for(let i=0; i<items.length; i++){
+            setTotal(currentTotal-=items[i].price);
+            console.log("currentTotal", currentTotal);
+            }
     }
+
 
     return(
         <div className="cart-container">
@@ -63,7 +74,9 @@ function Cart() {
                     //setTotal(currentTotal+=cartItem.price);
                         return <div className='priceCart'>{ // trebuie sa dea return la functia de map
                                             [<div>{cartItem.title}</div>,
-                                            <div>{cartItem.price}</div>]
+                                            <div>{cartItem.price}</div>,
+                                            <Button className='Button' onClick={removeItem}>Remove Item</Button>
+                                        ]
                                             
                                             }
                                         </div> 
@@ -72,7 +85,7 @@ function Cart() {
                 
             }
                 <div>Total = {total}</div>
-                <Button className='Button' onClick={removeItem}>Remove Item</Button>
+                
             </div>
            
         </div>
