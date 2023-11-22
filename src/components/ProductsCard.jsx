@@ -37,8 +37,8 @@ function ProductsCard(props) {
 
 
     const {oneProduct} = props;
-    console.log("oneProduct", oneProduct);
-    console.log(Math.round(oneProduct.discountPercentage));
+    //console.log("oneProduct", oneProduct);
+    //console.log(Math.round(oneProduct.discountPercentage));
     const newprice = oneProduct.price - (oneProduct.price * (Math.round(oneProduct.discountPercentage)/100));
     const supprice = newprice.toFixed(2).toString().split('.');
 
@@ -48,11 +48,11 @@ function ProductsCard(props) {
     });
       
     const xtr = formatter.format(supprice[0]);
-    console.log(xtr);
-    console.log(typeof(xtr)); 
+    //console.log(xtr);
+    //console.log(typeof(xtr)); 
       
     const qwe = xtr.split('.');
-    console.log(qwe);/* $2,500.00 */
+    //console.log(qwe);/* $2,500.00 */
 
 
     return(
@@ -62,11 +62,11 @@ function ProductsCard(props) {
                     <Link to={`/products/details/${oneProduct.id}`}><Card.Img src = {oneProduct.thumbnail} className="products-image"/></Link>
                     <Card.Title className='stars'><Link to={`/products/details/${oneProduct.id}`}>{oneProduct.title}</Link>
                             <div>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
+                                <span className="fa fa-star checked"></span>
+                                <span className="fa fa-star checked"></span>
+                                <span className="fa fa-star checked"></span>
+                                <span className="fa fa-star checked"></span>
+                                <span className="fa fa-star checked"></span>
                                 {oneProduct.rating}
                             </div>
                     </Card.Title>
@@ -77,7 +77,7 @@ function ProductsCard(props) {
                     {/*<Button><Link to='/products/details'>Detalii</Link></Button>*/}
                     <Card.Text className='newprice stars supprice'>Price: {qwe[0]}<sup> {supprice[1]}</sup></Card.Text>
                     <div className='Cart'>
-                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span className="material-symbols-outlined">shopping_cart</span>
                             <Button className='Button' onClick={addToCart}>Add to cart</Button>
                     </div>
                 </Card.Body>

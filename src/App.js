@@ -14,7 +14,7 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/products' exact element={<Products/>}/>

@@ -63,7 +63,6 @@ function Cart() {
              <h5>Item List</h5>
             {itemsLoaded ? //valoare adevarata
                 items.map((cartItem) => {//cartItem elementul curent - indexul din lista
-                    console.log("cartItem",cartItem);
                    // const dim = items.length;
                     //let total = 0;
                     //for(var i=0; i<dim; i++){

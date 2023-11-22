@@ -2,9 +2,13 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
+
 //TODO: Replace cart button to cart icon button
 
 function Header() {
+    
+    var existingItems = JSON.parse(localStorage.getItem('cart'));
+    console.log("existingItems", existingItems.length);
 
     return (
         <div className='header'>
@@ -31,8 +35,10 @@ function Header() {
             </div>
             <div className="cart">                 
                 <Link to='/cart'>
-                    <img src={require('./Cart.png')}/>
-                    
+                    <div className='cartItem'>
+                        <img src={require('./Cart.png')}/>
+                        <span className='itemAdd'>{existingItems.length}</span>
+                    </div>
                 </Link>
             </div>
         </div>
