@@ -60,7 +60,7 @@ function Cart() {
             </div>
             
             <div className='totalCart'>
-             <h5>Item List</h5>
+             
             {itemsLoaded ? //valoare adevarata
                 items.map((cartItem) => {//cartItem elementul curent - indexul din lista
                    // const dim = items.length;
@@ -85,7 +85,9 @@ function Cart() {
                                                     <td><img src={cartItem.thumbnail} className='productPresentation'/></td>
                                                     <td>{cartItem.title}</td>
                                                     <td>{cartItem.price}</td>
-                                                    <td>1</td>
+                                                    <td>
+                                                        <input type="number" id="quantity" name="quantity" min="1" className='inputQty'/>
+                                                    </td>
                                                     <td>{cartItem.price}</td>
                                                     <td><Button className='Button' onClick={removeItem}>Remove Item</Button></td>
                                                 </tr>
