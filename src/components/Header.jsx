@@ -1,14 +1,17 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
 import React from 'react';
-
+import { useEffect, useState } from "react";
 
 //TODO: Replace cart button to cart icon button
 
 function Header() {
-    
+
     var existingItems = JSON.parse(localStorage.getItem('cart'));
-    console.log("existingItems", existingItems.length);
+    console.log("existingItems.length", existingItems.length);
+      
+
+    
 
     return (
         <div className='header'>

@@ -72,9 +72,26 @@ function Cart() {
                     //let currentTotal = total;
                     //setTotal(currentTotal+=cartItem.price);
                         return <div className='priceCart'>{ // trebuie sa dea return la functia de map
-                                            [<div>{cartItem.title}</div>,
-                                            <div>{cartItem.price}</div>,
-                                            <Button className='Button' onClick={removeItem}>Remove Item</Button>
+                                            [<table>
+                                                <tr>
+                                                    <th>IMAGE</th>
+                                                    <th>PRODUCT NAME</th>
+                                                    <th>PRICE</th>
+                                                    <th>QTY</th>
+                                                    <th>SUBTOTAL</th>
+                                                    <th>OPTION</th>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src={cartItem.thumbnail} className='productPresentation'/></td>
+                                                    <td>{cartItem.title}</td>
+                                                    <td>{cartItem.price}</td>
+                                                    <td>1</td>
+                                                    <td>{cartItem.price}</td>
+                                                    <td><Button className='Button' onClick={removeItem}>Remove Item</Button></td>
+                                                </tr>
+                                            
+                                            
+                                            </table>
                                         ]
                                             
                                             }

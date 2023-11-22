@@ -6,7 +6,7 @@ function ProductsList(props) {
   const { productsList } = props;
 
   if (!Array.isArray(productsList.products)) {
-    return <p>No products here</p>;
+    return <div>No products here</div>;
   }
 
   return (
