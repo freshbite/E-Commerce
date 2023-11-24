@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import Cart from './components/Cart';
 import ProductDetails from './components/ProductDetails'
 import { Routes, Route } from 'react-router-dom';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 
 function App() {

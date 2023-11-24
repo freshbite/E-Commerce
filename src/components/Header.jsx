@@ -39,7 +39,7 @@ function Header() {
                     <div className='cartItem'>
                         {/*<img src={require('./Cart.png')}/>*/}
                         <span className="material-symbols-outlined" style={{color: "#044123", fontSize: "32px"}}>shopping_cart</span>
-                        <span className='itemAdd'>{cartlength}</span>
+                        {/*<span className='itemAdd'>{cartlength}</span>*/}
                     </div>
                 </Link>
             </div>

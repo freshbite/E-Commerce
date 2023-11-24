@@ -37,7 +37,7 @@ function Cart() {
         
     }, [items, itemsLoaded]);
 
-    function removeItem() {
+    function removeItem(cartItem) {
         
         var existingItems = JSON.parse(localStorage.getItem('cart'));
         console.log("existingItems", existingItems.length);
@@ -106,7 +106,7 @@ function Cart() {
                                                         <input type="text" id="quantities" placeholder="Add order quantity" onChange={calculateQnt} />
                                                     </td>
                                                     <td id="result">{cartItem.price}</td>
-                                                    <td><Button className='Button' onClick={removeItem}>Remove Item</Button></td>
+                                                    <td><Button className='Button' onClick={removeItem(cartItem)}>Remove Item</Button></td>
                                                 </tr>
                                             
                                             
