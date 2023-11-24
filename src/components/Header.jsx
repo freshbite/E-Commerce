@@ -17,7 +17,7 @@ function Header() {
         <div className='header'>
             <div className="logo">
                 <Link to='/'>
-                    <img src={require('./Logo.png')}/>
+                    <img src={require('./logo_2020.png')}/>
                 </Link>          
             </div>
             
@@ -39,8 +39,9 @@ function Header() {
             <div className="cart">                 
                 <Link to='/cart'>
                     <div className='cartItem'>
-                        <img src={require('./Cart.png')}/>
-                        <span className='itemAdd'>{existingItems.length}</span>
+                        {/*<img src={require('./Cart.png')}/>*/}
+                        <span className="material-symbols-outlined" style={{color: "#044123", fontSize: "32px"}}>shopping_cart</span>
+                        {/*<span className='itemAdd'>{existingItems.length}</span>*/}
                     </div>
                 </Link>
             </div>

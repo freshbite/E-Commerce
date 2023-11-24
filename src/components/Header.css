@@ -1,13 +1,15 @@
 .header{
     padding: 0px 10px;
-    background-color: #efbac4;
+    background-color: #F8F8FF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px 5px rgb(27, 39, 58);
+    box-shadow: 0px 1px 5px #044123;
     position: fixed;
     width: -webkit-fill-available;
 }
+
+
 
 .navigation-container {
     display: flex;
@@ -30,7 +32,7 @@ ul{
 }
 
 .lista li a{
-    color: rgb(27, 39, 58);
+    color: #044123;
     text-decoration: none;
 }
 
@@ -54,7 +56,9 @@ ul{
 
 .itemAdd{
     position: absolute;
-    background-color: cornsilk;
+    color: #044123;
+    background-color: #F8F8FF;
+    font-size: larger;
       /* height: fit-content; */
     height: 25px;
     width: 25px;
@@ -66,3 +70,4 @@ ul{
     align-items: center;
     justify-content: center;
   }
+
