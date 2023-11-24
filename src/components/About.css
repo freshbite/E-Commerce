@@ -1,8 +1,8 @@
 .about-me-container {
-    background: linear-gradient(126deg, #F8F8FF, #F8F8FF);
+    background: linear-gradient(126deg, #F8F8FF, rgb(204 220 200));
     padding: 40px;
     text-align: center;
-    color: #82187c;
+    color: #044123;
 }
   
 .about-me-content {
@@ -21,8 +21,8 @@ h1{
 }
 
 h2 {
-  font-size: 28px;
-  color: #333;
+  font-size: 31px;
+  color: #044123;
   margin-bottom: 20px;
 }
   
