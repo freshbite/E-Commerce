@@ -12,6 +12,7 @@ function Cart() {
     const [items, setItems] = useState();
     const [itemsLoaded, setItemsLoaded] = useState(false);
     const [total, setTotal] = useState(0);
+    
 
 
     useEffect(() => {
@@ -22,7 +23,7 @@ function Cart() {
                 let currentTotal = total;
                 for(let i=0; i<items.length; i++){
                 setTotal(currentTotal+=items[i].price);
-                console.log("currentTotal", currentTotal);
+                console.log("currentTotalCART", currentTotal);
                 }
             }
             
@@ -48,8 +49,24 @@ function Cart() {
         let currentTotal = total;
         for(let i=0; i<items.length; i++){
             setTotal(currentTotal-=items[i].price);
-            console.log("currentTotal", currentTotal);
+            console.log("currentTotalRemove", currentTotal);
             }
+    }
+
+    function calculateQnt(){
+       
+            console.log("items.legth", items.length);
+            const input = document.getElementById('quantities');
+            const result = document.getElementById('result');
+            for(let x=0; x<items.length; x++){
+                    input.addEventListener('keyup', function () {
+                    const totale = Number(this.value) * items[x].price;
+                    console.log("this.value", Number(this.value));
+                    setTotal(result.textContent = totale);
+                });
+        }
+        
+        
     }
 
 
@@ -86,9 +103,9 @@ function Cart() {
                                                     <td>{cartItem.title}</td>
                                                     <td>{cartItem.price}</td>
                                                     <td>
-                                                        <input type="number" id="quantity" name="quantity" min="1" className='inputQty'/>
+                                                        <input type="text" id="quantities" placeholder="Add order quantity" onChange={calculateQnt} />
                                                     </td>
-                                                    <td>{cartItem.price}</td>
+                                                    <td id="result">{cartItem.price}</td>
                                                     <td><Button className='Button' onClick={removeItem}>Remove Item</Button></td>
                                                 </tr>
                                             
