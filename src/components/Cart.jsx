@@ -10,7 +10,7 @@ function Cart() {
     const [total, setTotal] = useState(0);
     const [disctotal, discSetTotal] = useState(0);
     const [lengthCart, setLengthCart] = useState(0);
-    const [shipping, setShipping] = useState(30);
+    const [shipping, setShipping] = useState(0);
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -34,6 +34,13 @@ function Cart() {
                 }
             }
             
+            if(disctotal == 0){
+                setShipping(0);
+            }
+            else{
+                setShipping(30);
+
+            }
             setLengthCart(items.length);
             return;
         }//au ao valoare, daca au marcheaza ca loaded, incarcate 
