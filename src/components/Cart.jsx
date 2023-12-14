@@ -10,7 +10,7 @@ function Cart() {
     const [total, setTotal] = useState(0);
     const [disctotal, discSetTotal] = useState(0);
     const [lengthCart, setLengthCart] = useState(0);
-
+    const [shipping, setShipping] = useState(30);
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -141,11 +141,11 @@ function Cart() {
                                         </tr>
                                         <tr>
                                             <td>Shipping</td>
-                                            <td>{formatPrice.format(30)}</td>
+                                            <td>{formatPrice.format(shipping)}</td>
                                         </tr>
                                         <tr id='TotalAmount'>
                                             <td>Total amount</td>
-                                            <td>{formatPrice.format(30 + disctotal)}</td>
+                                            <td>{formatPrice.format(shipping + disctotal)}</td>
                                         </tr>
                         </table>
                     </div>
