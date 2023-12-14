@@ -1,14 +1,16 @@
 .cart-container {
-    
+    background-color: #f6f2fe;
     padding: 40px;
     text-align: center;
-    color: #82187c;
+    color: #4c4859;
+    height: 86vh;
 }
 
-.content{
+.contento{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .priceCart{
@@ -17,16 +19,22 @@
 }
 
 .totalCart{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    width: 75%;
+    display: flex;
+    top: 20%;
+    gap: 5%;
+    /* left: auto; */
+    /* transform: translate(-50%, -50%); */
+    /* padding: 10px; */
+    /* flex-direction: row; */
+    /* align-items: stretch; */
+    /* text-align: center; */
+    /* width: -webkit-fill-available; */
+    justify-content: space-around;
 }
 
 .productPresentation{
     height: 40px;
+    width: 80px;
 }
 
 .ButtonRemove{
@@ -37,16 +45,72 @@ table{
     width: -webkit-fill-available;
 }
 
+
 table td{
     width: 19%;
     text-align: center;
 }
 
+#trTable{
+    background-color: beige;
+}
+
 table tr{
-    box-shadow: 0px 1px 5px rgb(27, 39, 58);
+    box-shadow: 0px 1px 5px #4c4859;
 }
 
 .inputQty{
     text-align: center;
     width: inherit;
+}
+
+.Remove{
+    margin-top: 5%;
+    float: right;
+    width: fit-content;
+    display: flex;
+    align-content: space-around;
+    justify-content: flex-end;
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid gray;
+    background-color: #4c4859;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.Remove:hover{
+    background-color: #06d6a0;
+}
+
+.Remove span{
+        background-image: linear-gradient(to right,#06d6a0,#06d6a0);
+        border-top-right-radius: 0% 0%!important;
+        border-bottom-right-radius: 37% 100%!important;
+        margin: 0px;
+        padding: 0px 3px;
+}
+
+.Empty{
+    position: absolute;
+}
+
+.TableCart{
+    width: 200%;
+}
+
+.Checkout{
+    width: 60%;
+}
+
+
+.tableCheckout tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.tableCheckout td{
+    width: auto;
 }

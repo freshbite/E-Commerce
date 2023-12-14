@@ -17,10 +17,10 @@ function Home() {
                         <div className="slide-container">
                         </div>
                         <h1 className="moto">We wanted e-commerce to be simple. So we rebuilt it from the ground up.</h1>
-                        <p>Discover great rates, personalized services and exclusive benefits that help you shop in complete safety..</p>
+                        <p className="motosub">Discover great rates, personalized services and exclusive benefits that help you shop in complete safety..</p>
                         <button className="discover">
-                            <Link to='/products'>Learn more</Link>
-                            </button>
+                            <Link to='/products'>Shop now</Link>
+                        </button>
                     </div>
                     
                 </div>

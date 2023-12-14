@@ -1,45 +1,53 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
 import React from 'react';
-import { useEffect, useState } from "react";
+import { NavLink } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
-//TODO: Replace cart button to cart icon button
+function Header(props) {
 
-function Header() {
+    console.log("props.cartItemsLength",props.cartItemsLength);
+    const el = document.getElementsByClassName("itemAdd");
+   
+    //assigning location variable
+    const location = useLocation();
 
-  
-    
-    
+    //destructuring pathname from location
+    const { pathname } = location;
+
+    //Javascript split method to get the name of the path in array
+    const splitLocation = pathname.split("/");
+    console.log("split", splitLocation);
 
     return (
         <div className='header'>
             <div className="logo">
                 <Link to='/'>
-                    <img src={require('./logo_2020.png')}/>
-                </Link>          
+                    <img src={require('./logo_2020.png')} />
+                </Link>
             </div>
-            
+
             <div className='navigation-container'>
                 <nav className="navigation">
                     <ul className='lista'>
-                        <li>
+                        <li className={splitLocation[1] === "products" ? "active" : ""}>
                             <Link to='/products'>Products</Link>
                         </li>
-                        <li>
+                        <li className={splitLocation[1] === "about" ? "active" : ""}>
                             <Link to='/about'>About</Link>
                         </li>
-                        <li>
+                        <li className={splitLocation[1] === "contact" ? "active" : ""}>
                             <Link to='/contact'>Contact</Link>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div className="cart">                 
+            <div className="cart">
                 <Link to='/cart'>
                     <div className='cartItem'>
                         {/*<img src={require('./Cart.png')}/>*/}
-                        <span className="material-symbols-outlined" style={{color: "#044123", fontSize: "32px"}}>shopping_cart</span>
-                        {/*<span className='itemAdd'>{cartlength}</span>*/}
+                        <span className="material-symbols-outlined" style={{ color: "#06d6a0", fontSize: "32px" }}>shopping_cart</span>
+                        <span className='itemAdd'>({props.cartItemsLength})</span>
                     </div>
                 </Link>
             </div>

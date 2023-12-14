@@ -1,13 +1,18 @@
 .products-card{
-    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    background-color: #f6f2fe;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     width: 25%;
     margin-top: 5rem;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 25px 0px 0px;
+    opacity: 1;
+
 }
 
 .products-card:hover{
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background-color: white;
+    opacity: 1;
+    box-shadow: #4c4859 0px 1px 2px, #4c4859 0px 2px 4px, #4c4859 0px 4px 8px, #4c4859 0px 8px 16px;
 }
 .products-image{
     height: 10rem;
@@ -15,7 +20,10 @@
     width: -webkit-fill-available;
     border-radius: 10%;
 }
-
+  
+.firstWord{
+    color: #06d6a0;
+}
 .checked {
     color: orange;
 }
@@ -25,12 +33,14 @@
     justify-content: space-between;
     padding: 4px 14px;
     font-weight: 800;
-    font-style: initial;       
+    font-style: initial;   
 }
 
 .stars a{
     text-decoration: none;
-    color: black;
+    color: #4c4859;
+    font-size: larger;
+    
 }
 .price{
     text-decoration: line-through;
@@ -43,6 +53,8 @@
 }
 
 .supprice{
+    font-size: 1.7rem;
+    font-weight: bold;    
     display: block;
 }
 
@@ -51,13 +63,18 @@
 }
 
 .stars span{
-    padding: 0px 4px;
+    padding: 0px 0px;
 }
 
 .pricelist{
+    margin-top: 16px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: flex-start;
     gap: 5px;
+    color:#4c4859;
+    font-size: 1.7rem;
+    font-weight: bold;    
 }
 .stock{
     font-size: 0.8rem;
@@ -82,32 +99,37 @@
     float: right;
     width: fit-content;
     display: flex;
-    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
-    align-items: stretch;
     align-content: space-around;
     justify-content: flex-end;
     border-radius: 5px;
     padding: 4px;
     border: 1px solid gray;
+    background-color: #4c4859;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.Cart:hover{
+    background-color: #06d6a0;
+    
 }
 
 .Cart span{
-    background-image: linear-gradient(to right,#cf3f50,#fe2d34);
+    background-image: linear-gradient(to right,#06d6a0,#06d6a0);
     border-top-right-radius: 0% 0%!important;
     border-bottom-right-radius: 37% 100%!important;
     margin: 0px;
     padding: 0px 3px;
 }
 
-.Button{
-    
+.Button1{
     font-family: 'Red Hat Display', sans-serif;
     width: 100px;
     border: none;
     background-color: transparent;
-    color: #82187c;
+    color: white;
     font-size: medium;
     font-weight: 700;
+    cursor: pointer;
 }
 
 
@@ -120,3 +142,16 @@
   color: white;
   margin-left: 0px;
 }
+
+
+/* Popup container - can be anything you want */
+.Button1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  

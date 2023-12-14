@@ -1,9 +1,9 @@
 .details-container {
-    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    background-color: #f6f2fe;
     padding: 40px;
     text-align: center;
-    color: #82187c;
-    min-height: 100vh;
+    color: #4c4859;
+    min-height: 86vh;
 
 }
 
@@ -14,6 +14,9 @@
     
 }
 
+.det{
+    font-size: xxx-large;
+}
 .badita{
     display: flex;
     flex-direction: column;
@@ -41,7 +44,6 @@
 }
 
 .descr2 h1{
-    background-image: linear-gradient(265deg, rgb(27, 39, 58), #af4261);
     margin: 0px;
 }
 
@@ -51,8 +53,8 @@
 
 .stockk{
     margin: 0px;
-    font-size: 1rem;
-    color: rgb(0, 116, 29);
+    font-size: 1.5rem;
+    color: #4c4859;
     font-weight: 800;
     margin-bottom: 0px;
 }
@@ -61,6 +63,7 @@
     margin: 0px;
     font-weight: 900;
     color: #ef2809;
+    font-size: 1.5rem;
 }
 
 .react-slideshow-container{
@@ -88,3 +91,14 @@
     background: #efefef;
     text-align: center;
   }
+
+.itemdes{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.DLP{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

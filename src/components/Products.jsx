@@ -15,7 +15,6 @@ function Products() {
 
     return (
         <div className="products">
-            {/*Products list below*/}
             <ProductsList productsList={productsFromApi}/>
         </div>
     )

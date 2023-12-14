@@ -1,8 +1,8 @@
 .contact-container {
-    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
+    background-color: #f6f2fe;
     padding: 40px;
     text-align: center;
-    color: #82187c;
+    color: #4c4859;
 }
 
 .content{
@@ -22,6 +22,10 @@
     font-size: 1rem;
 }
 
+.subContactUs{
+    margin-top: 0px;
+    font-size: 2rem;
+}
 .contactUS{    
     border-radius: 5px;
     width: -webkit-fill-available;
@@ -54,20 +58,25 @@
 }
 
 .Simbol{
+    font-weight: bold;
+    color: #06d6a0;
     display: flex;
     align-items: center;
     font-size: 15px;
 }
 
 .orar{
+    font-weight: bold;
     padding: 14px 16px;
 }
 
 .contactUS a{
-    color: grey;  
+    font-weight: bold;
+    color: #4c4859;
 }
 
 .form{
+    font-weight: bold;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -91,15 +100,4 @@ textarea{
     height: 100px;
 }
 
-input[type="submit"]{
-    font-family: 'Red Hat Display', sans-serif;
-    background: linear-gradient(126deg, #fad8f0, #f7f7f7);
-    color: #82187c;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 6px 26px;
-    border-radius: 5px;
-    width: 20%;
-    font-weight: 700;
-}
 

@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import {Route, Link, Routes, useParams} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import './ProductDetails.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-
+import './ProductsCard.jsx';
 /* eslint-disable no-restricted-globals */
 
 
@@ -23,10 +21,7 @@ function ProductDetails() {
             const data = resJson
             setItems(data)
         })
-      }, [])
-
-    console.log("ITEMS", items);
-    console.log("ID",params);
+      }, [params.id])
     
 
     console.log(Math.round(items.discountPercentage));
@@ -48,11 +43,13 @@ function ProductDetails() {
     items.images = items.images || [1,2,3];
     console.log("arrtest", items.images);
 
+    
+
     return(
         <div className="details-container">
             
             <div className="content">
-                <h1>Product Details</h1>
+                <h1><span className="firstWord det">Product</span> Details</h1>
             </div>
             <div className="aboutProduct">
                 <Card>
@@ -76,14 +73,17 @@ function ProductDetails() {
                         {/*<Card.Img src = {items.thumbnail} className="prodimg"/>*/}
                         <div className="descr2">
                             <div className="badita">
-                                <h1>{items.title}</h1>
-                                <p className="brand">{items.brand}</p>
+                                <h1><span className="firstWord">{items.brand}</span>&nbsp;{items.title}</h1>
+                                {/*<p className="brand">{items.brand}</p>*/}
                             </div>
-                            <p class ="itemdes">{items.description}</p>
-                            <div>
-                                <p class ="stockk">in stock: {items.stock} units</p>
-                                <p class ="priceok">Price: {qwe[0]}<sup> {supprice[1]}</sup></p>
+                            <p class ="itemdes">{items.description}.</p>
+                            <div className="DLP">
+                                <div>
+                                    <p class ="stockk">in stock: {items.stock} units</p>
+                                    <p class ="priceok">Price: {qwe[0]}<sup> {supprice[1]}</sup></p>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </Card>
