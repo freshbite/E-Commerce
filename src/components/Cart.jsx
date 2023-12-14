@@ -10,7 +10,7 @@ function Cart() {
     const [total, setTotal] = useState(0);
     const [disctotal, discSetTotal] = useState(0);
     const [lengthCart, setLengthCart] = useState(0);
-    const [shipCost, setShipCost] = useState(30);
+
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -18,6 +18,7 @@ function Cart() {
     });
     const [formatPrice, setFormatPrice] = useState (formatter);
 
+    
     useEffect(() => {
         console.log("arulat");
         if (items != null) {
@@ -32,14 +33,7 @@ function Cart() {
                     setTotal(currentTotal += items[i].price);
                 }
             }
-
-            //const formatter = new Intl.NumberFormat('en-US', {
-              //  style: 'currency',
-                //currency: 'USD',
-            //});
-            console.log("formatPrice.format(disctotal)", disctotal);
             
-
             setLengthCart(items.length);
             return;
         }//au ao valoare, daca au marcheaza ca loaded, incarcate 
@@ -51,6 +45,7 @@ function Cart() {
         //parse luam stringa si o face obiect
 
     }, [items, itemsLoaded]);
+
 
     function removeItem(cartItem) {
         var existingItems = JSON.parse(localStorage.getItem('cart'));
@@ -73,7 +68,6 @@ function Cart() {
             const fer = (items[i].price - (items[i].price * (Math.round(items[i].discountPercentage) / 100)));
             discSetTotal(discCurrentTotal -= fer);       
             setTotal(currentTotal -= items[i].price);
-            console.log("currentTotalRemove", currentTotal);
         }
         if (existingItems.length === 0){
             discSetTotal(discCurrentTotal *=0);
@@ -86,8 +80,9 @@ function Cart() {
         <div className="cart-container">
             <div className="contento">
                 <h1><span className="firstWord det">Your</span> Cart</h1>
-                <div className='TotalPret'>Total = {total}</div>
-                <div className='TotalPret'>SubTotal = {disctotal.toFixed(2)}</div>
+                <div class="scroll-left">
+                    <p>From Friday you can take advantage of the weekend offer, and from Monday you start a new week of non-food offers.</p>
+                </div>
             </div>
                 <div className='totalCart'>
                     <div className='TableCart'>
@@ -115,7 +110,7 @@ function Cart() {
                                         </tr>
                                         <tr>
                                             <td><img src={cartItem.thumbnail} className='productPresentation' alt='Thumbnail'/></td>
-                                            <td>{cartItem.title}</td>
+                                            <td id='titleProduct'>{cartItem.title}</td>
                                             <td>{formatPrice.format(cartItem.price)}</td>
                                             <td>{cartItem.discountPercentage}</td>
                                             <td id="result">{formatPrice.format(discperItem.toFixed(2))}</td>
@@ -133,18 +128,22 @@ function Cart() {
                         }</div>
                     <div className='Checkout'>
                         <table className='tableCheckout'> 
-                                        <tr>
+                                        <tr id='order'>
                                             <th>ORDER SUMMARY</th>
                                         </tr>
                                         <tr>
-                                            <td>Products({lengthCart})</td>
-                                            <td>{formatPrice.format(disctotal)}</td>
+                                            <td>Products ({lengthCart})</td>
+                                            <td>{formatPrice.format(total)}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>You saved</td>
+                                            <td>{formatPrice.format(total - disctotal)}</td>
                                         </tr>
                                         <tr>
                                             <td>Shipping</td>
-                                            <td>{formatPrice.format(shipCost)}</td>
+                                            <td>{formatPrice.format(30)}</td>
                                         </tr>
-                                        <tr>
+                                        <tr id='TotalAmount'>
                                             <td>Total amount</td>
                                             <td>{formatPrice.format(30 + disctotal)}</td>
                                         </tr>
